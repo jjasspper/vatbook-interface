@@ -1,0 +1,29 @@
+{
+  "name": "vatbook-table-style",
+  "version": "0.0.1",
+  "description": "Add styling to your vatbook table",
+  "main": "vatbook-table.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjasspper/vatbook-table.git"
+  },
+  "keywords": [
+    "Vatbook",
+    "Vatsim",
+    "Theme",
+    "Styling"
+  ],
+  "author": "Jasper van Hienen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjasspper/vatbook-table/issues"
+  },
+  "homepage": "https://github.com/jjasspper/vatbook-table#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
