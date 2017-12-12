@@ -1,7 +1,7 @@
 $padding-col: 10px;
 $hover-color: #f6f6f6;
 $table-head-text-color: #ffffff;
-$header-color: #4C96ED;
+$header-color: #A0B4C8; //#4C96ED
 $border-color: $header-color;
 $link-color: #FFFFFF;
 $link-color-hover: #1c3c9d;
@@ -11,6 +11,7 @@ $link-color-hover: #1c3c9d;
 	text-align: left;
 	font-family: 'Roboto', sans-serif;
 	
+	// Styling for the table
 	&-table {
 		
 		width: 100%;
@@ -34,6 +35,7 @@ $link-color-hover: #1c3c9d;
 				color: #ffffff;
 			}
 			&-text {
+				display: inline-block;
 				margin-top: 5px;
 				margin-bottom: 10px;
 			}
@@ -63,20 +65,17 @@ $link-color-hover: #1c3c9d;
 			}
 			
 		}
-		
-		&-body {
-		
-		}
-		
 	}
 	
+	// Styling for the links
 	&-links {
 		padding-right: 10px;
 		display: inline-block;
 		float: right;
 		padding-top: 7px;
 		
-		li:not(:first-child):after {
+		// Adding the | after a list item
+		li:not(child):after {
 			content: " | ";
 			color: #FFFFFF;
 		}
@@ -101,16 +100,22 @@ $link-color-hover: #1c3c9d;
 		
 	}
 	
-	//Responsive Settings
+	// Responsive styling
 	@media screen and (max-width: 750px) {
 		&-links {
 			-webkit-padding-start: 5px;
-			display: inline-block;
+			white-space: pre-line;
+			display: initial !important;
 			float: none !important;
 			padding-top: 7px;
 			
-			li:not(:first-child):after {
-				content: " | ";
+			li:not(child):before {
+				content: "- ";
+				color: #FFFFFF;
+			}
+			
+			li:not(child):after {
+				content: "";
 				color: #FFFFFF;
 			}
 			
@@ -136,8 +141,7 @@ $link-color-hover: #1c3c9d;
 		}
 	}
 	
-	//Devider
-	
+	// Divider
 	&-text-divider {
 		@media screen and (min-width: 750px){
 			display: none;
