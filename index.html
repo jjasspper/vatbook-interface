@@ -2,41 +2,76 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="src/vatbook-table.css">
     <meta charset="UTF-8">
     <title>Table</title>
 </head>
 <body>
-<div class="table-container">
-    <table width="90%" cellpadding="3" cellspacing="0" style="
-    border-radius: 5px;
-">
-        <tbody>
-        <tr align="left">
-            <th>Date</th>
-            <th>From</th>
-            <th>Until</th>
-            <th>Position</th>
-            <th>Controller</th>
-            <th>Event</th>
-        </tr>
-        <tr>
-            <td>14.12.2017</td>
-            <td>19:30</td>
-            <td>21:00</td>
-            <td>EHAM_DEL</td>
-            <td>Jasper van Hienen</td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>19:30</td>
-            <td>21:00</td>
-            <td>EHAM_M_TWR</td>
-            <td>Sem Drevijn</td>
-            <td></td>
-        </tr>
-        </tbody>
-    </table>
+<div class="vatbook-interface">
+
+    <div class="vatbook-interface-table-wrapper">
+
+        <div class="vatbook-interface-header">
+            <h3 class="vatbook-interface-table-head-headertext">ATC Bookings</h3>
+            <br class="vatbook-interface-text-divider">
+            <ul class="vatbook-interface-links">
+                <li><a href="vb_book.php?cmd=ShowAll">Show All Bookings</a></li>
+                <li><a href="vb_book.php?cmd=select_icao">Add Entry</a></li>
+                <li><a href="vb_book.php?cmd=MyBookings">My bookings</a></li>
+                <li><a href="vb_book.php?cmd=Logout">Logout</a></li>
+            </ul>
+        </div>
+
+        <div style="overflow-x: auto"><!---->
+            <table class="vatbook-interface-table" width="90%" cellspacing="0" cellpadding="3">
+                <thead>
+                <tr class="vatbook-interface-table-head">
+                    <th><p class="vatbook-interface-table-head-text">Date <i class="material-icons">date_range</i></p>
+                    </th>
+                    <th><p class=vatbook-interface-table-head-text>From <i class="material-icons">access_time</i></p>
+                    </th>
+                    <th><p class=vatbook-interface-table-head-text>Until <i class="material-icons">timer</i></p></th>
+                    <th><p class=vatbook-interface-table-head-text>Position <i class="material-icons">location_on</i>
+                    </p>
+                    </th>
+                    <th><p class=vatbook-interface-table-head-text>Controller <i class="material-icons">person</i></p>
+                    </th>
+                    <th><p class=vatbook-interface-table-head-text>Event <i class="material-icons">event</i></p></th>
+                </tr>
+                </thead>
+
+                <tbody class="vatbook-interface-table-body">
+                <tr class="vatbook-interface-table-row">
+                    <td class="vatbook-interface-table-row-col">14.12.2017</td>
+                    <td class="vatbook-interface-table-row-col">19:30</td>
+                    <td class="vatbook-interface-table-row-col">21:00</td>
+                    <td class="vatbook-interface-table-row-col">EHAM_DEL</td>
+                    <td class="vatbook-interface-table-row-col">Jasper van Hienen</td>
+                    <td class="vatbook-interface-table-row-col"><i class="material-icons" style="color: green">check</i>
+                    </td>
+                </tr>
+                <tr class="vatbook-interface-table-row">
+                    <td class="vatbook-interface-table-row-col"></td>
+                    <td class="vatbook-interface-table-row-col">19:30</td>
+                    <td class="vatbook-interface-table-row-col">21:00</td>
+                    <td class="vatbook-interface-table-row-col">EHAM_M_TWR</td>
+                    <td class="vatbook-interface-table-row-col">Sem Drevijn</td>
+                    <td class="vatbook-interface-table-row-col"></td>
+                </tr>
+                <tr class="vatbook-interface-table-row">
+                    <td class="vatbook-interface-table-row-col">14.12.2017</td>
+                    <td class="vatbook-interface-table-row-col">19:30</td>
+                    <td class="vatbook-interface-table-row-col">21:00</td>
+                    <td class="vatbook-interface-table-row-col">EHAM_DEL</td>
+                    <td class="vatbook-interface-table-row-col">Jasper van Hienen</td>
+                    <td class="vatbook-interface-table-row-col"><i class="material-icons" style="color: green">check</i>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>

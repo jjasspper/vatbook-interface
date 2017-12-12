@@ -1,3 +1,147 @@
-.test{
-	color: green;
+$padding-col: 10px;
+$hover-color: #f6f6f6;
+$table-head-text-color: #ffffff;
+$header-color: #4C96ED;
+$border-color: $header-color;
+$link-color: #FFFFFF;
+$link-color-hover: #1c3c9d;
+
+.vatbook-interface {
+	
+	text-align: left;
+	font-family: 'Roboto', sans-serif;
+	
+	&-table {
+		
+		width: 100%;
+		
+		&-wrapper {
+			width: 80%;
+			margin: 0 auto;
+			border: 2px solid $border-color;
+			border-radius: 3px;
+			border-collapse: collapse;
+			background-color: $header-color;
+		}
+		
+		&-head {
+			background-color: $border-color;
+			color: $table-head-text-color;
+			
+			&-headertext {
+				display: inline-block;
+				padding-left: 10px;
+				color: #ffffff;
+			}
+			&-text {
+				margin-top: 5px;
+				margin-bottom: 10px;
+			}
+			
+			th {
+				padding-left: 10px;
+			}
+			
+			i {
+				position: relative;
+				top: 5px;
+			}
+		}
+		
+		&-row {
+			background-color: #ffffff;
+			
+			&:hover {
+				background-color: $hover-color
+			}
+			border-bottom: 1px solid $border-color;
+			
+			&-col {
+				padding-left: 10px;
+				padding-top: $padding-col;
+				padding-bottom: $padding-col;
+			}
+			
+		}
+		
+		&-body {
+		
+		}
+		
+	}
+	
+	&-links {
+		padding-right: 10px;
+		display: inline-block;
+		float: right;
+		padding-top: 7px;
+		
+		li:not(:first-child):after {
+			content: " | ";
+			color: #FFFFFF;
+		}
+		
+		li {
+			padding-left: 5px;
+			display: inline-block;
+		}
+		
+		a {
+			text-decoration: none;
+			color: $link-color;
+			
+			&:visited {
+				color: $link-color;
+			}
+			
+			&:hover {
+				color: $link-color-hover;
+			}
+		}
+		
+	}
+	
+	//Responsive Settings
+	@media screen and (max-width: 750px) {
+		&-links {
+			-webkit-padding-start: 5px;
+			display: inline-block;
+			float: none !important;
+			padding-top: 7px;
+			
+			li:not(:first-child):after {
+				content: " | ";
+				color: #FFFFFF;
+			}
+			
+			li {
+				//padding-left: 5px;
+				display: inline;
+				//float: right;
+			}
+			
+			a {
+				text-decoration: none;
+				color: $link-color;
+				
+				&:visited {
+					color: $link-color;
+				}
+				
+				&:hover {
+					color: $link-color-hover;
+				}
+			}
+			
+		}
+	}
+	
+	//Devider
+	
+	&-text-divider {
+		@media screen and (min-width: 750px){
+			display: none;
+		}
+	}
+	
 }
